@@ -1,0 +1,11 @@
+while True:
+    try:
+        nome = input("Digite seu nome: ")
+        ano = int(input("Dgite o ano que nasceu: "))
+
+        idade = 2022 - ano
+        print(f"{nome} a idade ou a que vai completar é {idade}")
+        break
+
+    except ValueError:
+        print("Algo está errado. Tente novamente ")

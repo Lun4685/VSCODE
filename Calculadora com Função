@@ -1,19 +1,24 @@
-num1 = int(input("Digite o primeiro valor: "))
-num2 = int(input("Digite o segundo valor: "))
-op = input("Informe a operação pra ser feita, soma, subtracao, divisao e multiplicacao: ")
-
-def calculadora():
-    if op == "soma":
-         return num1 + num2
-    elif op == "subtracao":
-        return num1 - num2
-    elif op == "multiplicacao":
-        return num1 * num2
-    elif op == "divisao":
-        if num2 != 0:
-            return num1 / num2
+while True: 
+    num1 = int(input("Digite o primeiro valor: "))
+    num2 = int(input("Digite o segundo valor: "))
+    op = input("Informe a operação pra ser feita, soma, subtracao, divisao e multiplicacao. Ou se quiser sair do codiogo so escrever sair: ")
+    
+    if op== "sair":
+        print("Encerrado")
+        break
+    
+    def calculadora(num1,num2,op):
+        if op == "soma":
+            return num1 + num2
+        elif op == "subtracao":
+            return num1 - num2
+        elif op == "multiplicacao":
+            return num1 * num2
+        elif op == "divisao":
+            if num2 != 0:
+                return num1 / num2
+            else:
+                return 0
         else:
             return 0
-    else:
-        return 0
-print(calculadora())
+   print(calculadora(num1,num2,op))
